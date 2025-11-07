@@ -1,0 +1,106 @@
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: #1b263b;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.3rem;
+}
+
+.contacts {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contacts a {
+  color: #ffa90a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contacts a:hover {
+  color: #ffa90a;
+  text-decoration: underline;
+}
+
+
+section {
+  background-color: white;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #1b263b;
+  border-bottom: 2px solid #ffa90a;
+  padding-bottom: 0.3rem;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:hover {
+  background-color: #fafafa;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1b263b;
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  section {
+    width: 95%;
+  }
+
+  .contacts {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9rem;
+  }
+}
