@@ -1,14 +1,24 @@
-# Zahra Tohidifard - HTML Resume
+# Zahra Tohidifard - HTML & CSS Resume 🌸
 
-This repository contains my personal resume created using **pure HTML** — without any CSS or external libraries.  
-It showcases my basic web development skills and provides a clean, semantic structure for a personal portfolio.
+This repository contains my personal resume built using **HTML and CSS**.  
+It started as a simple HTML-only version and was later enhanced with custom CSS styling to make it **clean, professional, and fully responsive**.
+
+---
 
 ## 📄 Project Overview
-The `index.html` file includes:
-- **Header Section:** Name, title, and contact information (LinkedIn, GitHub, Email)  
-- **About Me:** A short introduction about my interests and career goals  
-- **Education:** University, field of study, and academic details  
+The project includes two main files:
+- `index.html` → The structure and content of the resume  
+- `style.css` → The design, layout, and responsive styling  
+
+### Sections Included
+- **Header:** Name, title, and contact links (LinkedIn, GitHub, Email)  
+- **About Me:** A short introduction about my goals and interests  
+- **Education:** University details and current study status  
 - **Skills:** A categorized table of technical and soft skills  
+- **Footer:** Simple copyright section  
+
+---
 
 ## 🛠️ Technologies Used
-- HTML5 (semantic elements only)
+- HTML5 (semantic elements)
+- CSS3 (Flexbox, Grid, Media Queries)
