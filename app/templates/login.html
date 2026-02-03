@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <i class="bx bxs-star"></i>
+          <span>Menu</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <!-- <div class="user">
+        <img src="pishi-play.jpg" alt="play" class="pishi-img" />
+        <div>
+          <p class="bold">Client B.</p>
+          <p>Admin</p>
+        </div>
+      </div> -->
+      <ul>
+        <li>
+          <a href="/" id="homeBtn">
+            <i class="bx bxs-home"></i>
+            <span class="nav-item">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="/request" id="projectReqBtn">
+            <i class="bx bxs-send"></i>
+            <span class="nav-item">Project Request</span>
+          </a>
+          <span class="tooltip">Project Request</span>
+        </li>
+        <li>
+          <a href="/login" id="loginBtn">
+            <i class="bx bxs-user"></i>
+            <span class="nav-item" >Login</span>
+          </a>
+          <span class="tooltip">Login</span>
+        </li>
+       
+      </ul>
+      <div class="online-users">
+        <h1>Online users</h1>
+        <output id="online-count"><i class='bx bx-user' ></i> 0</output>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="login-content">
+        <div class="box">
+          <h1 class="loginTxt">Login</h1>
+          <form class="form" method="post" action="/login">
+            <input name="username" placeholder="username" />
+            <input name="password" type="password" placeholder="password" />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="main-content">
+      <div class="container">
+        <h1>Pishi Land</h1>
+      
+      </div>
+    </div> -->
+
+    <!-- <a href="index.html">Logout</a> -->
+  </body>
+</html>
+
+<script>
+  let btn = document.querySelector("#btn");
+  let sidebar = document.querySelector(".sidebar");
+  let content = document.querySelector(".login-content");
+
+  btn.onclick = function () {
+    sidebar.classList.toggle("active");
+    content.classList.toggle("shift");
+  };
+</script>

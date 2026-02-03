@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Request</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <i class="bx bxs-star"></i>
+          <span>Menu</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/" id="homeBtn">
+            <i class="bx bxs-home"></i>
+            <span class="nav-item">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="/request" id="projectReqBtn">
+            <i class="bx bxs-send"></i>
+            <span class="nav-item">Project Request</span>
+          </a>
+          <span class="tooltip">Project Request</span>
+        </li>
+        <li>
+          <a href="/login" id="loginBtn">
+            <i class="bx bxs-user"></i>
+            <span class="nav-item" >Login</span>
+          </a>
+          <span class="tooltip">Login</span>
+        </li>
+        <!-- <li>
+          <a href="" id="logoutBtn">
+            <i class="bx bx-log-out"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li> -->
+      </ul>
+      <div class="online-users">
+        <h1>Online users</h1>
+        <output id="online-count"><i class='bx bx-user' ></i> 0</output>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="project-form">
+         <h1 class="reqTxt">Request a Project</h1>
+        <form class="projectForm">
+          <input type="text" id="name" placeholder="Full name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="number" id="phone" placeholder="Phone number" />
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Describe your project..."
+            rows="4"
+            required
+          ></textarea>
+
+          <input type="number" id="budget" placeholder="Budget" />
+          <input type="date" id="deadline" />
+          <button type="submit">
+            <i class="bx bxs-cloud-upload"></i> submit request
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let btn = document.querySelector("#btn");
+  let sidebar = document.querySelector(".sidebar");
+  let projectBtn = document.querySelector("#projectBtn");
+  let adminBtn = document.querySelector("#adminBtn");
+  let logoutBtn = document.querySelector("#logoutBtn");
+
+  btn.onclick = function () {
+    sidebar.classList.toggle("active");
+  };
+</script>
+<script src="/static/js/main.js"></script>

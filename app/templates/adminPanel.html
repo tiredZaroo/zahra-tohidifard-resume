@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <i class="bx bxs-star"></i>
+          <span>Menu</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/home" id="adminHomeBtn">
+            <i class="bx bxs-home"></i>
+            <span class="nav-item">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="/adminPanel" id="projecstListBtn">
+            <i class="bx bx-list-ul"></i>
+            <span class="nav-item">Projects</span>
+          </a>
+          <span class="tooltip">Projects</span>
+        </li>
+        <!-- <li>
+          <a href="index.html">
+            <i class="bx bxs-user"></i>
+            <span class="nav-item" id="adminBtn">Admin panel</span>
+          </a>
+          <span class="tooltip">Admin panel</span>
+        </li> -->
+        <li>
+          <a href="/" id="logoutBtn">
+            <i class="bx bx-log-out"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+      <div class="online-users">
+        <h1>Online users</h1>
+        <output id="online-count"><i class="bx bx-user"></i> 0</output>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="admin-content">
+        <h1>Admin Panel</h1>
+        <table class="projet-inf-table">
+          <tr>
+            <th>Name</th>
+          </tr>
+          <tr>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <th>Budget</th>
+          </tr>
+          <tr>
+            <th>Deadline</th>
+          </tr>
+          <tr>
+            <th>Status</th>
+          </tr>
+
+          <!-- <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Budget</th>
+      <th>Deadline</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr> -->
+
+          <tbody id="projectsTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let btn = document.querySelector("#btn");
+  let sidebar = document.querySelector(".sidebar");
+  let projectBtn = document.querySelector("#projectBtn");
+  let adminBtn = document.querySelector("#adminBtn");
+  let logoutBtn = document.querySelector("#logoutBtn");
+  let onUsers = document.getElementById("#result");
+
+  btn.onclick = function () {
+    sidebar.classList.toggle("active");
+  };
+</script>
+
+<!-- <h1>Admin Dashboard</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Budget</th>
+      <th>Deadline</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="projectsTable">
+ 
+  </tbody>
+</table>
+<a href="/logout">Logout</a>
+
+<script src="/static/admin.js"></script> -->
