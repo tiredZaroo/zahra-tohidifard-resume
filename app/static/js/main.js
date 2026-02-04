@@ -28,50 +28,57 @@ btn.onclick = function () {
 //   };
 
 
+const ws = new WebSocket("ws://127.0.0.1:8000/ws");
 
-  // WebSocket Connection
-const socket = new WebSocket(`wss://127.0.0.1:8000//ws/online`);
-
-socket.onopen = function(e) {
-    console.log("WebSocket connected");
-};
-
-socket.onmessage = function(event) {
+ws.onmessage = function(event){
     const data = JSON.parse(event.data);
-    document.getElementById('#online-count').textContent = data.online_count;
+    document.getElementById("onlineCount").innerText = data.online;
 };
 
-socket.onclose = function(event) {
-    console.log("WebSocket disconnected");
-};
+//   // WebSocket Connection
+// const socket = new WebSocket(`wss://127.0.0.1:8000//ws/online`);
 
-socket.onerror = function(error) {
-    console.error("WebSocket error:", error);
-};
+// socket.onopen = function(e) {
+//     console.log("WebSocket connected");
+// };
 
-// برای تست می‌توانید هر 30 ثانیه پیام ping بفرستید
-setInterval(() => {
-    if (socket.readyState === WebSocket.OPEN) {
-        socket.send('ping');
-    }
-}, 30000);
+// socket.onmessage = function(event) {
+//     const data = JSON.parse(event.data);
+//     document.getElementById('#online-count').textContent = data.online_count;
+// };
 
-   // WebSocket Connection
-    let ws;
-    let reconnectAttempts = 0;
-    const maxReconnectAttempts = 5;
+// socket.onclose = function(event) {
+//     console.log("WebSocket disconnected");
+// };
+
+// socket.onerror = function(error) {
+//     console.error("WebSocket error:", error);
+// };
+
+// // برای تست می‌توانید هر 30 ثانیه پیام ping بفرستید
+// setInterval(() => {
+//     if (socket.readyState === WebSocket.OPEN) {
+//         socket.send('ping');
+//     }
+// }, 30000);
+
+  //  // WebSocket Connection
+  //   let ws;
+  //   let reconnectAttempts = 0;
+  //   const maxReconnectAttempts = 5;
     
-    function connectWebSocket() {
-        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = `${protocol}//${window.location.host}/ws/online`;
+  //   function connectWebSocket() {
+  //       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  //       const wsUrl = `${protocol}//${window.location.host}/ws/online`;
         
-        ws = new WebSocket(wsUrl);
+  //       ws = new WebSocket(wsUrl);
         
-        ws.onopen = function() {
-            console.log('WebSocket connected');
-            reconnectAttempts = 0;
-        };
-      }
+  //       ws.onopen = function() {
+  //           console.log('WebSocket connected');
+  //           reconnectAttempts = 0;
+  //       };
+  //     }
+
 
 
 // const form = document.getElementById("projectForm");

@@ -1,7 +1,7 @@
 
 
 from sqlalchemy import Column, Integer, String
-from app.database import Base
+from .database import Base
 
 class Project(Base):
     __tablename__ = "projects"
@@ -14,25 +14,25 @@ class Project(Base):
     deadline = Column(String, default="")
 
 
-# from pydantic import BaseModel, EmailStr
-# from typing import Optional
-# from datetime import datetime
+from pydantic import BaseModel, EmailStr
+from typing import Optional
+from datetime import datetime
 
-# class ProjectRequest(BaseModel):
-#     name: str
-#     email: EmailStr
-#     project_type: str  # نوع پروژه: وب‌سایت، اپ موبایل، دسکتاپ، etc.
-#     budget: str  # بودجه: کم، متوسط، بالا
-#     timeline: str  # زمان‌بندی: فوری، 1-3 ماه، بیش از 3 ماه
-#     description: str
-#     phone: Optional[str] = None
-#     company: Optional[str] = None
+class ProjectRequest(BaseModel):
+    name: str
+    email: EmailStr
+    project_type: str  # نوع پروژه: وب‌سایت، اپ موبایل، دسکتاپ، etc.
+    budget: str  # بودجه: کم، متوسط، بالا
+    timeline: str  # زمان‌بندی: فوری، 1-3 ماه، بیش از 3 ماه
+    description: str
+    phone: Optional[str] = None
+    company: Optional[str] = None
     
-# class ProjectRequestDB(ProjectRequest):
-#     id: str
-#     status: str = "new"  # new, in_review, approved, rejected
-#     created_at: datetime
-#     ip_address: Optional[str] = None
+class ProjectRequestDB(ProjectRequest):
+    id: str
+    status: str = "new"  # new, in_review, approved, rejected
+    created_at: datetime
+    ip_address: Optional[str] = None
 
 
 # models.py
